@@ -1,0 +1,6 @@
+# Node, Python, macOS etc.
+node_modules/
+.DS_Store
+__pycache__/
+.env
+*.log

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MiKaKi Connection</title>
+  <meta name="description" content="アメリカ製ライフスタイルブランドの正規輸入代理店 MiKaKi Connection の公式サイト" />
+  <meta property="og:image" content="https://cdn.example.com/hero-lifestyle.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@9/swiper-bundle.min.css" />
+  <style>
+    :root {
+      --color-primary: #111111; /* main black */
+      --color-secondary: #333333; /* dark gray */
+      --color-accent: #777777; /* medium gray */
+      --font-heading: 'Noto Sans JP', sans-serif;
+      --font-body: 'Noto Sans JP', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); line-height: 1.6; color: var(--color-secondary); }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    h1, h2, h3 { font-family: var(--font-heading); }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: saturate(180%) blur(12px);
+      z-index: 1000;
+      border-bottom: 1px solid #e5e5e5;
+    }
+    nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.75rem 1rem;
+    }
+    nav ul { list-style: none; display: flex; gap: 1.5rem; }
+    nav li a {
+      position: relative;
+      font-weight: 700;
+    }
+    nav li a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background: var(--color-accent);
+      transition: width 0.3s;
+    }
+    nav li a:hover { color: var(--color-accent); }
+    nav li a:hover::after { width: 100%; }
+
+    /* HERO */
+
+    /* SLIDER */
+    #slider { padding: 0; }
+    #slider .swiper { width: 100%; height: 380px; }
+    #slider .swiper-slide img { width: 100%; height: 100%; object-fit: cover; }
+
+    .hero {
+      background-image: url('https://cdn.example.com/hero-lifestyle.jpg');
+      background-size: cover;
+      background-position: center;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      color: #fff;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.35);
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 0 1rem;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.125rem;
+      margin-bottom: 2rem;
+      white-space: pre-line;
+    }
+    .btn-primary {
+      background: var(--color-primary);
+      color: #fff;
+      padding: 0.75rem 2rem;
+      border-radius: 4px;
+      font-weight: 700;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: #222222; }
+
+    section { padding: 4rem 1rem; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .section-heading { text-align: center; margin-bottom: 2.5rem; }
+
+    /* ABOUT */
+    #about p { white-space: pre-line; font-size: 1.05rem; }
+
+    /* BRAND GRID */
+    .brand-grid {
+      display: grid;
+      gap: 2rem;
+    }
+    @media(min-width: 768px){
+      .brand-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .brand-card { overflow: hidden; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; }
+    .brand-card:hover { transform: translateY(-4px); box-shadow: 0 6px 16px rgba(0,0,0,0.15); }
+    .brand-card img { width: 100%; height: 200px; object-fit: cover; }
+    .brand-card-content { padding: 1rem; background: #fff; }
+    .brand-card h3 { margin-bottom: 0.5rem; color: var(--color-primary); }
+
+    /* VALUE PROPS */
+    .value-items { display: grid; gap: 2rem; }
+    @media(min-width: 640px){ .value-items { grid-template-columns: repeat(3, 1fr); } }
+    .value-item { text-align: center; padding: 1rem; }
+    .value-item .icon { font-size: 2rem; margin-bottom: 0.5rem; }
+
+    /* CONTACT */
+    .contact-grid { display: grid; gap: 2rem; }
+    @media(min-width: 768px){ .contact-grid { grid-template-columns: 1fr 1fr; } }
+    .contact-form input, .contact-form textarea {
+      width: 100%; padding: 0.5rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 4px;
+    }
+    .contact-form button { background: var(--color-primary); color:#fff; padding: 0.75rem 1.5rem; border:none; border-radius:4px; cursor:pointer; }
+    .contact-form button:hover { background:#d94c78; }
+
+    /* Hide removed sections */
+    #value, #contact { display:none; }
+
+    /* FOOTER */
+    footer { background: #fafafa; padding: 2rem 1rem; text-align: center; font-size: 0.9rem; color: #888; }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav>
+    <div class="container">
+      <a href="#top"><img src="https://cdn.example.com/mikaki-logo.svg" alt="MiKaKi Logo" height="32" /></a>
+      <ul>
+        <li><a href="#about">会社概要</a></li>
+        <li><a href="#brands">ブランド</a></li>
+        <li><a href="#access">所在地</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="top">
+    <div class="hero-inner">
+      <h1>For All Sparkling Generation</h1>
+      <p>日々の生活シーンにささやかなお洒落を運び、ゆとりと笑顔あふれる暮らしのお手伝いをします</p>
+      <a class="btn-primary" href="https://store.shopping.yahoo.co.jp/mikaki-connection/" target="_blank" rel="noopener">オンラインショップを見る</a>
+    </div>
+  </header>
+
+  <!-- SLIDER -->
+  <section id="slider">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="https://cdn.example.com/slide1.jpg" alt="slide1"></div>
+        <div class="swiper-slide"><img src="https://cdn.example.com/slide2.jpg" alt="slide2"></div>
+        <div class="swiper-slide"><img src="https://cdn.example.com/slide3.jpg" alt="slide3"></div>
+        <div class="swiper-slide"><img src="https://cdn.example.com/slide4.jpg" alt="slide4"></div>
+        <div class="swiper-slide"><img src="https://cdn.example.com/slide5.jpg" alt="slide5"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-heading">MiKaKi Connection について</h2>
+      <p>
+        手にした瞬間にふっと笑みがこぼれ、目にしただけで心が和らぐ——。
+        そんな『好き』に囲まれた暮らしには、ゆとりと潤いが生まれます。
+        MiKaKi Connection は、その想いを胸に 2013 年に誕生しました。
+        私たちは「日々の生活シーンにささやかなお洒落を運び、ゆとりと笑顔あふれる暮らしのお手伝いをする」ことをモットーに、
+        世界中から心温まるプロダクトと素敵なライフスタイルのアイディアをお届けしています。
+      </p>
+    </div>
+  </section>
+
+  <!-- BRANDS -->
+  <section id="brands" style="background: var(--color-accent);">
+    <div class="container">
+      <h2 class="section-heading">ブランド</h2>
+      <div class="brand-grid">
+        <div class="brand-card">
+          <img src="https://cdn.example.com/stephaniedawn.jpg" alt="Stephanie Dawn" />
+          <div class="brand-card-content">
+            <h3>Stephanie Dawn</h3>
+            <p>オハイオ州でハンドメイドされるキルトバッグ</p>
+          </div>
+        </div>
+        <div class="brand-card">
+          <img src="https://cdn.example.com/americanjewel.jpg" alt="American Jewel" />
+          <div class="brand-card-content">
+            <h3>American Jewel</h3>
+            <p>NY 発・ポップなアクセ＆スマホケース</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCESS -->
+  <section id="access" style="background:#f5f5f5;">
+    <div class="container">
+      <h2 class="section-heading">所在地</h2>
+      <address style="white-space:pre-line; font-style:normal; text-align:center; font-size:1.1rem;">
+〒224-0001  
+神奈川県横浜市都筑区中川6丁目1番地
+      </address>
+      <!-- Map iframe placeholder -->
+    </div>
+  </section>
+
+  <!-- VALUE PROPS -->
+  <section id="value">
+    <div class="container">
+      <h2 class="section-heading">わたしたちの約束</h2>
+      <div class="value-items">
+        <div class="value-item">
+          <div class="icon">✅</div>
+          <h3>日本正規代理店</h3>
+          <p>本国メーカー公認だから安心</p>
+        </div>
+        <div class="value-item">
+          <div class="icon">📦</div>
+          <h3>翌営業日発送</h3>
+          <p>5,000円以上で送料無料</p>
+        </div>
+        <div class="value-item">
+          <div class="icon">🔄</div>
+          <h3>30日返品保証</h3>
+          <p>オンラインでも気軽にお試し</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" style="background:#f9f9f9;">
+    <div class="container">
+      <div class="contact-grid">
+        <div>
+          <h2 class="section-heading" style="text-align:left;">お問い合わせ</h2>
+          <address style="margin-bottom:1rem; white-space:pre-line;">
+〒101-0021  
+東京都千代田区外神田2-3-4  
+電話: 03-1234-5678  
+メール: info@mikakico.com
+          </address>
+          <!-- Map iframe placeholder -->
+        </div>
+        <div>
+          <form class="contact-form" onsubmit="event.preventDefault(); alert('送信ありがとうございます!'); this.reset();">
+            <input type="text" name="name" placeholder="お名前" required />
+            <input type="email" name="email" placeholder="メールアドレス" required />
+            <textarea name="message" rows="5" placeholder="お問い合わせ内容" required></textarea>
+            <button type="submit">送信</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © <script>document.write(new Date().getFullYear())</script> MiKaKi Connection Inc. All rights reserved.
+  </footer>
+  <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      autoplay: { delay: 5000, disableOnInteraction: false },
+      pagination: { el: '.swiper-pagination', clickable: true },
+    });
+  </script>
+</body>
+</html>
