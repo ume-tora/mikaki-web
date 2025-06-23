@@ -148,6 +148,9 @@
 
     /* ABOUT */
     #about p { white-space: pre-line; font-size: 1.05rem; }
+    .about-images { display:grid; gap:1.5rem; margin-top:2rem; }
+    @media(min-width:600px){ .about-images{ grid-template-columns:repeat(2,1fr); } }
+    .about-images img { width:100%; height:280px; object-fit:cover; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
 
     /* BRAND GRID */
     .brand-grid {
@@ -233,6 +236,11 @@
         私たちは「日々の生活シーンにささやかなお洒落を運び、ゆとりと笑顔あふれる暮らしのお手伝いをする」ことをモットーに、
         世界中から心温まるプロダクトと素敵なライフスタイルのアイディアをお届けしています。
       </p>
+
+      <div class="about-images">
+        <img src="assets/SohoSD1.jpg" alt="Stephanie Dawn バッグのイメージ">
+        <img src="assets/avantiforweb.jpg" alt="Avanti タオルのイメージ">
+      </div>
     </div>
   </section>
 
