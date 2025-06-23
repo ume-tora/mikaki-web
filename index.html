@@ -47,6 +47,7 @@
     }
     nav ul { list-style: none; display: flex; gap: 1.5rem; }
     nav li a {
+      font-size: 1.15rem;
       font-size: 1.05rem;
       position: relative;
       font-weight: 700;
@@ -66,7 +67,11 @@
     nav li a:hover::after { width: 100%; }
 
     /* HERO */
-    .nagisa-logo { margin-top:1.5rem; height:40px; }
+    .catchcopy { word-break: keep-all; }
+    .hero-cta { display:flex; flex-direction:column; align-items:center; gap:0.8rem; margin-top:1.5rem; }
+    .hero-cta img { height:40px; }
+
+    
 
     /* SLIDER */
     /* SLIDER */
@@ -153,7 +158,7 @@
 
     /* ABOUT */
     #about p { white-space: pre-line; font-size: 1.05rem; }
-    .about-images { display:grid; gap:1.5rem; margin-top:2rem; justify-content:center; align-items:center; }
+    .about-images { display:flex; gap:1.5rem; justify-content:center; flex-wrap:wrap; margin-top:2rem; }
     @media(min-width:600px){ .about-images{ grid-template-columns:repeat(2,1fr); } }
     .about-images figure {position:relative;}
     .about-images img { width:100%; max-width:260px; aspect-ratio:1/1; object-fit:cover; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
@@ -218,9 +223,11 @@
   <header class="hero" id="top">
     <div class="hero-inner">
       <h1>For All Sparkling Generation</h1>
-      <p>日々の生活シーンにささやかなお洒落を運び、ゆとりと笑顔あふれる暮らしのお手伝いをします</p>
-      <a class="btn-primary" href="https://www.nagisabreeze.com/" target="_blank" rel="noopener">オンラインショップ Nagisa Breeze を見る</a>
-        <img class="nagisa-logo" src="assets/nagisa_whitelogo.png" alt="Nagisa Breeze ロゴ" />
+      <p class="catchcopy">日々の生活シーンにささやかなお洒落を運び、ゆとりと笑顔あふれる暮らしのお手伝いをします</p>
+      <div class="hero-cta">
+          <a class="btn-primary" href="https://www.nagisabreeze.com/" target="_blank" rel="noopener">オンラインショップ&nbsp;Nagisa&nbsp;Breeze&nbsp;を見る</a>
+          <img src="assets/NagisaBreeze_None_20140729.png" alt="Nagisa Breeze ロゴ" />
+        </div>
     </div>
   </header>
 
@@ -271,15 +278,15 @@ MiKaKi Connectionは、
           
         </figure>
         <figure>
-          <img src="assets/avantiforweb.jpg" alt="Avanti 海モチーフ刺繍タオル">
-          Avanti 海モチーフ刺繍タオル
+          <img src="assets/avantiforweb.jpg" alt="">
+          
         </figure>
       </div>
     </div>
   </section>
 
   <!-- BRANDS -->
-  <section id="brands" style="background: var(--color-accent);">
+  <section id="brands" style="background:#fff;">
     <div class="container">
       <h2 class="section-heading">ブランド</h2>
       <div class="brand-grid">
