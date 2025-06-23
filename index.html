@@ -72,6 +72,32 @@
     #slider .swiper-slide { display:flex; align-items:center; justify-content:center; }
     #slider .swiper-slide img { width: 100%; height: 100%; object-fit: contain; }
 
+    /* COMPANY INFO */
+    .company-info {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 0.75rem 1.5rem;
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+    .company-info dt {
+      font-weight: 700;
+      color: var(--color-accent);
+      text-align: right;
+    }
+    .company-info dd { margin: 0; }
+
+    @media (max-width: 600px) {
+      .company-info { grid-template-columns: 1fr; }
+      .company-info dt { text-align: left; }
+    }
+
 
     .hero {
       background-image: url('assets/hero_01.png');
