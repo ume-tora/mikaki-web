@@ -47,6 +47,7 @@
     }
     nav ul { list-style: none; display: flex; gap: 1.5rem; }
     nav li a {
+      font-size: 1.05rem;
       position: relative;
       font-weight: 700;
     }
@@ -61,6 +62,7 @@
       transition: width 0.3s;
     }
     nav li a:hover { color: var(--color-accent); }
+    .logo { height: 28px; }
     nav li a:hover::after { width: 100%; }
 
     /* HERO */
@@ -100,7 +102,7 @@
 
 
     .hero {
-      background-image: url('assets/hero_01.png');
+      background-image: url('assets/hero_02.png');
       background-size: cover;
       background-position: center;
       min-height: 90vh;
@@ -124,8 +126,9 @@
       padding: 0 1rem;
     }
     .hero h1 {
-      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
       margin-bottom: 1rem;
+      white-space: nowrap;
     }
     .hero p {
       font-size: 1.125rem;
@@ -151,7 +154,7 @@
     .about-images { display:grid; gap:1.5rem; margin-top:2rem; }
     @media(min-width:600px){ .about-images{ grid-template-columns:repeat(2,1fr); } }
     .about-images figure {position:relative;}
-    .about-images img { width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
+    .about-images img { width:100%; max-width:260px; aspect-ratio:1/1; object-fit:cover; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
     .about-images figcaption { margin-top:0.5rem; font-size:0.95rem; text-align:center; color:#555; }
 
     /* BRAND GRID */
@@ -194,7 +197,7 @@
   <!-- NAV -->
   <nav>
     <div class="container">
-      <a href="#top"><img src="assets/MiKaKiConnection_None_20140729.png" alt="MiKaKi Logo" height="32" /></a>
+      <a href="#top"><img class="logo" src="assets/MiKaKiConnection_None_20140729.png" alt="MiKaKi Logo" /></a>
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#brands">Brand</a></li>
@@ -239,14 +242,36 @@
         世界中から心温まるプロダクトと素敵なライフスタイルのアイディアをお届けしています。
       </p>
 
+      <div class="about-text" style="max-width:800px;margin:0 auto;line-height:1.8;font-size:1.05rem;white-space:pre-line;text-align:center;">
+        「日々の生活シーンにささやかなお洒落を運び、
+ゆとりと笑顔あふれる暮らしのお手伝いをします」
+
+手にしたときに微笑んでしまう。
+目にしたときにほっと心が和らぐ。
+
+そんな好きなもの達に囲まれていれば、心にゆとりと潤いが生まれる。
+暮らしの空間が楽しければ、きっと沢山の笑顔が溢れる。
+
+そのような思いから
+私たちの会社はスタートしました。
+
+MiKaKi Connectionは、
+
+「日々の生活シーンにささやかなお洒落を運び、
+ゆとりと笑顔あふれる暮らしのお手伝いをする」
+
+ことをモットーに、世界中の心温まる商品や
+素敵な暮らしのアイディアをお届けしてまいります。
+      </div>
+
       <div class="about-images">
         <figure>
           <img src="assets/SohoSD1.jpg" alt="Stephanie Dawn キルトバッグ SoHo">
-          <figcaption>Stephanie Dawn キルトバッグ「SoHo」</figcaption>
+          Stephanie Dawn キルトバッグ「SoHo」
         </figure>
         <figure>
           <img src="assets/avantiforweb.jpg" alt="Avanti 海モチーフ刺繍タオル">
-          <figcaption>Avanti 海モチーフ刺繍タオル</figcaption>
+          Avanti 海モチーフ刺繍タオル
         </figure>
       </div>
     </div>
