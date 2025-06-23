@@ -162,10 +162,16 @@
     /* BRAND GRID */
     .brand-grid {
       display: grid;
-      gap: 2rem;
+      gap: 1.5rem;
+      justify-content: center;
+      align-items: center;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
-    @media(min-width: 768px){
-      .brand-grid { grid-template-columns: repeat(2, 1fr); }
+    .brand-grid img {
+      width: 100%;
+      max-width: 120px;
+      object-fit: contain;
+      filter: drop-shadow(0 1px 3px rgba(0,0,0,0.1));
     }
     .brand-card { overflow: hidden; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; }
     .brand-card:hover { transform: translateY(-4px); box-shadow: 0 6px 16px rgba(0,0,0,0.15); }
@@ -277,20 +283,15 @@ MiKaKi Connectionは、
     <div class="container">
       <h2 class="section-heading">ブランド</h2>
       <div class="brand-grid">
-        <div class="brand-card">
-          <img src="assets/Stephanie Dawn.jpg" alt="Stephanie Dawn" />
-          <div class="brand-card-content">
-            <h3>Stephanie Dawn</h3>
-            <p>オハイオ州でハンドメイドされるキルトバッグ</p>
-          </div>
-        </div>
-        <div class="brand-card">
-          <img src="assets/american-jewel_158x42.jpg" alt="American Jewel" />
-          <div class="brand-card-content">
-            <h3>American Jewel</h3>
-            <p>NY 発・ポップなアクセ＆スマホケース</p>
-          </div>
-        </div>
+        <img src="assets/Stephanie Dawn.jpg" alt="Stephanie Dawn">
+        <img src="assets/toplogo_bandi.png" alt="BANDI">
+        <img src="assets/Habarsham_logo.jpg" alt="Habarsham Candle">
+        <img src="assets/Lynn's Whim.jpg" alt="Lynn's Whim">
+        <img src="assets/Avanti1.jpg" alt="Avanti">
+        <img src="assets/Scentennial.jpg" alt="Scentennial">
+        <img src="assets/Toddy Gear1.jpg" alt="Toddy Gear">
+        <img src="assets/JGBead.jpg" alt="JG Bead">
+        <img src="assets/Sweet Pea Linen1.jpg" alt="Sweet Pea Linens">
       </div>
     </div>
   </section>
