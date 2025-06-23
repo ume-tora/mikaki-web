@@ -62,10 +62,11 @@
       transition: width 0.3s;
     }
     nav li a:hover { color: var(--color-accent); }
-    .logo { height: 28px; }
+    .logo { height: 56px; }
     nav li a:hover::after { width: 100%; }
 
     /* HERO */
+    .nagisa-logo { margin-top:1.5rem; height:40px; }
 
     /* SLIDER */
     /* SLIDER */
@@ -131,6 +132,7 @@
       white-space: nowrap;
     }
     .hero p {
+      white-space: nowrap;
       font-size: 1.125rem;
       margin-bottom: 2rem;
       white-space: pre-line;
@@ -151,7 +153,7 @@
 
     /* ABOUT */
     #about p { white-space: pre-line; font-size: 1.05rem; }
-    .about-images { display:grid; gap:1.5rem; margin-top:2rem; }
+    .about-images { display:grid; gap:1.5rem; margin-top:2rem; justify-content:center; align-items:center; }
     @media(min-width:600px){ .about-images{ grid-template-columns:repeat(2,1fr); } }
     .about-images figure {position:relative;}
     .about-images img { width:100%; max-width:260px; aspect-ratio:1/1; object-fit:cover; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
@@ -212,6 +214,7 @@
       <h1>For All Sparkling Generation</h1>
       <p>日々の生活シーンにささやかなお洒落を運び、ゆとりと笑顔あふれる暮らしのお手伝いをします</p>
       <a class="btn-primary" href="https://www.nagisabreeze.com/" target="_blank" rel="noopener">オンラインショップ Nagisa Breeze を見る</a>
+        <img class="nagisa-logo" src="assets/nagisa_whitelogo.png" alt="Nagisa Breeze ロゴ" />
     </div>
   </header>
 
@@ -234,14 +237,6 @@
   <section id="about">
     <div class="container">
       <h2 class="section-heading">MiKaKi Connection について</h2>
-      <p>
-        手にした瞬間にふっと笑みがこぼれ、目にしただけで心が和らぐ——。
-        そんな『好き』に囲まれた暮らしには、ゆとりと潤いが生まれます。
-        MiKaKi Connection は、その想いを胸に 2013 年に誕生しました。
-        私たちは「日々の生活シーンにささやかなお洒落を運び、ゆとりと笑顔あふれる暮らしのお手伝いをする」ことをモットーに、
-        世界中から心温まるプロダクトと素敵なライフスタイルのアイディアをお届けしています。
-      </p>
-
       <div class="about-text" style="max-width:800px;margin:0 auto;line-height:1.8;font-size:1.05rem;white-space:pre-line;text-align:center;">
         「日々の生活シーンにささやかなお洒落を運び、
 ゆとりと笑顔あふれる暮らしのお手伝いをします」
@@ -267,7 +262,7 @@ MiKaKi Connectionは、
       <div class="about-images">
         <figure>
           <img src="assets/SohoSD1.jpg" alt="Stephanie Dawn キルトバッグ SoHo">
-          Stephanie Dawn キルトバッグ「SoHo」
+          
         </figure>
         <figure>
           <img src="assets/avantiforweb.jpg" alt="Avanti 海モチーフ刺繍タオル">
