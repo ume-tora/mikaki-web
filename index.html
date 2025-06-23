@@ -99,7 +99,7 @@
       top:2px;
     }
     .hero-cta .btn-primary:hover{ transform:translateY(-2px); background:linear-gradient(135deg,#000,#333); }
-    .hero-cta img { height:60px; }
+    
 
     
 
@@ -242,10 +242,31 @@
     footer { background: #fafafa; padding: 2rem 1rem; text-align: center; font-size: 0.9rem; color: #888; }
       /* Custom tweaks */
     #slider .swiper-slide img{width:80%;height:80%;object-fit:contain;}
-    #brands{padding:4rem 0;}
+    #brands{padding:6rem 0;}
+    .hero-cta{display:flex;flex-direction:column;align-items:center;gap:0.5rem;}
+    .hero-cta img{height:80px;margin-bottom:0;}
     .about-text{margin-top:0.25rem !important;}
     #about .section-heading{margin-bottom:1rem;}
-    .company-info{border:1px solid #e5e5e5;}
+    .company-info{
+      background:#fff;
+      border:1px solid #ddd;
+      border-radius:12px;
+      box-shadow:0 4px 14px rgba(0,0,0,0.05);
+      padding:2.5rem;
+      display:grid;
+      grid-template-columns:140px 1fr;
+      gap:0.75rem 1.5rem;
+      font-size:1.1rem;
+      line-height:1.7;
+    }
+    .company-info dt{
+      font-weight:600;
+      color:#444;
+      padding-left:0.75rem;
+      border-left:4px solid var(--color-accent);
+    }
+    .company-info dd{margin:0;color:#222;line-height:1.7;}
+
   </style>
 </head>
 <body>
@@ -353,10 +374,10 @@ MiKaKi Connectionは、
 
         <dt>事業内容</dt>
         <dd>
-          ・輸入品オンラインショップ <strong>Nagisa Breeze</strong> 運営<br/>
-          ・<em>Stephanie Dawn</em> 正規日本代理店<br/>
-          ・<em>American Jewel</em> 正規日本代理店<br/>
-          ・ドロップシッピング販売事業
+          輸入品オンラインショップ <strong>Nagisa Breeze</strong> 運営<br/>
+          <em>Stephanie Dawn</em> 正規日本代理店<br/>
+          <em>American Jewel</em> 正規日本代理店<br/>
+          ドロップシッピング販売事業
         </dd>
 
         <dt>代表</dt>
