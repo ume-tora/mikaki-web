@@ -69,7 +69,8 @@
     /* HERO */
     .catchcopy { word-break: keep-all; }
     .hero-cta { display:flex; flex-direction:column; align-items:center; gap:0.8rem; margin-top:1.5rem; }
-    .hero-cta img { height:40px; }
+    .hero-cta .btn-primary { background: rgba(0,0,0,0.8); }
+    .hero-cta img { height:60px; }
 
     
 
@@ -161,7 +162,7 @@
     .about-images { display:flex; gap:1.5rem; justify-content:center; flex-wrap:wrap; margin-top:2rem; }
     @media(min-width:600px){ .about-images{ grid-template-columns:repeat(2,1fr); } }
     .about-images figure {position:relative;}
-    .about-images img { width:100%; max-width:260px; aspect-ratio:1/1; object-fit:cover; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
+    .about-images img { height:260px; width:auto; max-width:100%; object-fit:cover; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
     .about-images figcaption { margin-top:0.5rem; font-size:0.95rem; text-align:center; color:#555; }
 
     /* BRAND GRID */
@@ -176,7 +177,6 @@
       width: 100%;
       max-width: 120px;
       object-fit: contain;
-      filter: drop-shadow(0 1px 3px rgba(0,0,0,0.1));
     }
     .brand-card { overflow: hidden; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; }
     .brand-card:hover { transform: translateY(-4px); box-shadow: 0 6px 16px rgba(0,0,0,0.15); }
@@ -251,9 +251,6 @@
     <div class="container">
       <h2 class="section-heading">MiKaKi Connection について</h2>
       <div class="about-text" style="max-width:800px;margin:0 auto;line-height:1.8;font-size:1.05rem;white-space:pre-line;text-align:center;">
-        「日々の生活シーンにささやかなお洒落を運び、
-ゆとりと笑顔あふれる暮らしのお手伝いをします」
-
 手にしたときに微笑んでしまう。
 目にしたときにほっと心が和らぐ。
 
