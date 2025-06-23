@@ -10,19 +10,29 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper@9/swiper-bundle.min.css" />
   <style>
     :root {
       --color-primary: #111111; /* main black */
       --color-secondary: #333333; /* dark gray */
       --color-accent: #777777; /* medium gray */
-      --font-heading: 'Noto Sans JP', sans-serif;
+      --font-heading: 'Poppins', 'Noto Sans JP', sans-serif;
       --font-body: 'Noto Sans JP', sans-serif;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
+
+    /* === Style Enhancements === */
+    body { background:#fdfdfd; }
+    h1, h2, h3 { letter-spacing: .03em; }
+    .section-heading { font-family: var(--font-heading); font-weight:600; text-transform:uppercase; letter-spacing:.05em; }
+    .btn-primary { background: rgba(0,0,0,0.85); transition: background .3s; }
+    .btn-primary:hover { background: rgba(0,0,0,1); }
+    /* Brand logo hover */
+    .brand-grid img { filter: grayscale(100%) brightness(90%); transition: transform .3s, filter .3s; }
+    .brand-grid img:hover { filter:none; transform: scale(1.05); }
     body { font-family: var(--font-body); line-height: 1.6; color: var(--color-secondary); }
     img { max-width: 100%; height: auto; display: block; }
     a { color: inherit; text-decoration: none; }
@@ -67,7 +77,7 @@
     nav li a:hover::after { width: 100%; }
 
     /* HERO */
-    .catchcopy { word-break: keep-all; }
+    .catchcopy { word-break: keep-all; font-family: var(--font-heading); font-weight:600; }
     .hero-cta { display:flex; flex-direction:column; align-items:center; gap:0.8rem; margin-top:1.5rem; }
     .hero-cta .btn-primary { background: rgba(0,0,0,0.8); }
     .hero-cta img { height:60px; }
@@ -285,7 +295,7 @@ MiKaKi Connectionは、
   <!-- BRANDS -->
   <section id="brands" style="background:#fff;">
     <div class="container">
-      <h2 class="section-heading">ブランド</h2>
+      <h2 class="section-heading">Brand</h2>
       <div class="brand-grid">
         <img src="assets/Stephanie Dawn.jpg" alt="Stephanie Dawn">
         <img src="assets/toplogo_bandi.png" alt="BANDI">
