@@ -66,12 +66,15 @@
     /* HERO */
 
     /* SLIDER */
-    #slider { padding: 0; }
-    #slider .swiper { width: 100%; height: 380px; }
-    #slider .swiper-slide img { width: 100%; height: 100%; object-fit: cover; }
+    /* SLIDER */
+    #slider { padding: 2rem 0; background:#fff; }
+    #slider .swiper { width: 100%; max-width: 1100px; margin: 0 auto; aspect-ratio: 16/9; }
+    #slider .swiper-slide { display:flex; align-items:center; justify-content:center; }
+    #slider .swiper-slide img { width: 100%; height: 100%; object-fit: contain; }
+
 
     .hero {
-      background-image: url('assets/top.jpg');
+      background-image: url('assets/hero_01.png');
       background-size: cover;
       background-position: center;
       min-height: 90vh;
@@ -160,11 +163,11 @@
   <!-- NAV -->
   <nav>
     <div class="container">
-      <a href="#top"><img src="https://cdn.example.com/mikaki-logo.svg" alt="MiKaKi Logo" height="32" /></a>
+      <a href="#top"><img src="assets/MiKaKiConnection_None_20140729.png" alt="MiKaKi Logo" height="32" /></a>
       <ul>
-        <li><a href="#about">会社概要</a></li>
-        <li><a href="#brands">ブランド</a></li>
-        <li><a href="#access">所在地</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#brands">Brand</a></li>
+        <li><a href="#access">会社概要</a></li>
       </ul>
     </div>
   </nav>
@@ -174,7 +177,7 @@
     <div class="hero-inner">
       <h1>For All Sparkling Generation</h1>
       <p>日々の生活シーンにささやかなお洒落を運び、ゆとりと笑顔あふれる暮らしのお手伝いをします</p>
-      <a class="btn-primary" href="https://store.shopping.yahoo.co.jp/mikaki-connection/" target="_blank" rel="noopener">オンラインショップを見る</a>
+      <a class="btn-primary" href="https://www.nagisabreeze.com/" target="_blank" rel="noopener">オンラインショップ Nagisa Breeze を見る</a>
     </div>
   </header>
 
@@ -182,11 +185,12 @@
   <section id="slider">
     <div class="swiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="assets/Stephanie Dawn.jpg" alt="Stephanie Dawn"></div>
-        <div class="swiper-slide"><img src="assets/american-jewel_158x42.jpg" alt="American Jewel"></div>
-        <div class="swiper-slide"><img src="assets/habarsham.jpg" alt="Habarsham"></div>
-        <div class="swiper-slide"><img src="assets/joseijishin1.jpg" alt="Media"></div>
+        <div class="swiper-slide"><img src="assets/top.jpg" alt="top"></div>
         <div class="swiper-slide"><img src="assets/kokode1.png" alt="Kokode"></div>
+        <div class="swiper-slide"><img src="assets/pococe.jpg" alt="pococe"></div>
+        <div class="swiper-slide"><img src="assets/joseijishin1.jpg" alt="joseijishin1"></div>
+        <div class="swiper-slide"><img src="assets/joseipart2.jpg" alt="joseipart2"></div>
+        <div class="swiper-slide"><img src="assets/habarsham.jpg" alt="habarsham"></div>
       </div>
       <div class="swiper-pagination"></div>
     </div>
@@ -212,14 +216,14 @@
       <h2 class="section-heading">ブランド</h2>
       <div class="brand-grid">
         <div class="brand-card">
-          <img src="https://cdn.example.com/stephaniedawn.jpg" alt="Stephanie Dawn" />
+          <img src="assets/Stephanie Dawn.jpg" alt="Stephanie Dawn" />
           <div class="brand-card-content">
             <h3>Stephanie Dawn</h3>
             <p>オハイオ州でハンドメイドされるキルトバッグ</p>
           </div>
         </div>
         <div class="brand-card">
-          <img src="https://cdn.example.com/americanjewel.jpg" alt="American Jewel" />
+          <img src="assets/american-jewel_158x42.jpg" alt="American Jewel" />
           <div class="brand-card-content">
             <h3>American Jewel</h3>
             <p>NY 発・ポップなアクセ＆スマホケース</p>
@@ -232,12 +236,25 @@
   <!-- ACCESS -->
   <section id="access" style="background:#f5f5f5;">
     <div class="container">
-      <h2 class="section-heading">所在地</h2>
-      <address style="white-space:pre-line; font-style:normal; text-align:center; font-size:1.1rem;">
-〒224-0001  
-神奈川県横浜市都筑区中川6丁目1番地
-      </address>
-      <!-- Map iframe placeholder -->
+      <h2 class="section-heading">会社概要</h2>
+      <dl class="company-info">
+        <dt>社名</dt>
+        <dd>MiKaKi Connection, LLC</dd>
+
+        <dt>所在地</dt>
+        <dd>神奈川県横浜市都筑区中川6丁目1番地</dd>
+
+        <dt>事業内容</dt>
+        <dd>
+          ・輸入品オンラインショップ <strong>Nagisa Breeze</strong> 運営<br/>
+          ・<em>Stephanie Dawn</em> 正規日本代理店<br/>
+          ・<em>American Jewel</em> 正規日本代理店<br/>
+          ・ドロップシッピング販売事業
+        </dd>
+
+        <dt>代表</dt>
+        <dd>下村 航平</dd>
+      </dl>
     </div>
   </section>
 
