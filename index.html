@@ -104,11 +104,13 @@
     
 
     /* SLIDER */
-    /* SLIDER */
     #slider { padding: 2rem 0; background:#fff; }
     #slider .swiper { width: 100%; max-width: 900px; margin: 0 auto; aspect-ratio: 16/9; }
     #slider .swiper-slide { display:flex; align-items:center; justify-content:center; }
-    #slider .swiper-slide img { width: 90%; height: 90%; object-fit: contain; }
+    #slider .swiper-slide img{width:80%;height:80%;object-fit:contain;}
+    
+    
+    
 
     /* COMPANY INFO */
     .company-info {
@@ -143,7 +145,7 @@
       background-image: url('assets/hero_02.png');
       background-size: cover;
       background-position: center;
-      min-height: 90vh;
+      min-height: 60vh;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -238,6 +240,12 @@
 
     /* FOOTER */
     footer { background: #fafafa; padding: 2rem 1rem; text-align: center; font-size: 0.9rem; color: #888; }
+      /* Custom tweaks */
+    #slider .swiper-slide img{width:80%;height:80%;object-fit:contain;}
+    #brands{padding:4rem 0;}
+    .about-text{margin-top:0.25rem !important;}
+    #about .section-heading{margin-bottom:1rem;}
+    .company-info{border:1px solid #e5e5e5;}
   </style>
 </head>
 <body>
@@ -259,8 +267,8 @@
       <h1>For All Sparkling Generation</h1>
       <p class="catchcopy">日々の生活シーンにささやかなお洒落を運び、ゆとりと笑顔あふれる暮らしのお手伝いをします</p>
       <div class="hero-cta">
-          <a class="btn-primary" href="https://www.nagisabreeze.com/" target="_blank" rel="noopener">オンラインショップ&nbsp;Nagisa&nbsp;Breeze&nbsp;を見る</a>
           <img src="assets/NagisaBreeze_None_20140729.png" alt="Nagisa Breeze ロゴ" />
+          <a class="btn-primary" href="https://www.nagisabreeze.com/" target="_blank" rel="noopener">オンラインショップ&nbsp;Nagisa&nbsp;Breeze&nbsp;を見る</a>
         </div>
     </div>
   </header>
@@ -321,15 +329,13 @@ MiKaKi Connectionは、
     <div class="container">
       <h2 class="section-heading">Brand</h2>
       <div class="brand-grid">
-        <img src="assets/Stephanie Dawn.jpg" alt="Stephanie Dawn">
+        <img src="assets/sd-logo_bc-website_1603455757__48717.original.png" alt="Stephanie Dawn">
         <img src="assets/toplogo_bandi.png" alt="BANDI">
-        <img src="assets/Habarsham_logo.jpg" alt="Habarsham Candle">
-        <img src="assets/Lynn's Whim.jpg" alt="Lynn's Whim">
-        <img src="assets/Avanti1.jpg" alt="Avanti">
-        <img src="assets/Scentennial.jpg" alt="Scentennial">
-        <img src="assets/Toddy Gear1.jpg" alt="Toddy Gear">
-        <img src="assets/JGBead.jpg" alt="JG Bead">
+        <img src="assets/HabershamCandleCircle_PNG_Black_Transparent.png" alt="Habarsham Candle">
+        <img src="assets/Avanti-Home-Logo.jpg" alt="Avanti">
+        <img src="assets/toddy gear logo.png" alt="Toddy Gear">
         <img src="assets/Sweet Pea Linen1.jpg" alt="Sweet Pea Linens">
+        <img src="assets/american jewel.jpg" alt="American Jewel">
       </div>
     </div>
   </section>
@@ -419,7 +425,7 @@ MiKaKi Connectionは、
       loop: true,
       autoplay: { delay: 5000, disableOnInteraction: false },
       pagination: { el: '.swiper-pagination', clickable: true },
-      spaceBetween: 20,
+      spaceBetween: 16,
       slidesPerView: 2,
       slidesPerGroup: 1,
       breakpoints: {
