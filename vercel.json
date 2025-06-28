@@ -3,7 +3,7 @@
   "routes": [
     {
       "src": "/(.*\\.(?:ico|gif|svg|jpg|jpeg|png|webmanifest|xml|txt))$",
-      "dest": "/public/$1"
+      "dest": "/assets/$1"
     },
     {
       "handle": "filesystem"
